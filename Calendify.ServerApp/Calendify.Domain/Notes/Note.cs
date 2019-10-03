@@ -12,5 +12,7 @@ namespace Calendify.Domain.Notes
         public string Content { get; set; }
         public long EventId { get; set; }
         public Event  Event  { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Modified { get; set; }
     }
 }

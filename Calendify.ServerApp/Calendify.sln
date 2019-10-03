@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendify.Persistence", "Ca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendify.Infrastructure", "Calendify.Infrastructure\Calendify.Infrastructure.csproj", "{F5E7C591-3D30-4C76-826E-2B66AD09E0DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendify.Ioc", "Calendify.Ioc\Calendify.Ioc.csproj", "{3973EF48-5082-4541-B68E-088A66016491}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendify.Utils", "Calendify.Utils\Calendify.Utils.csproj", "{9F123716-72C9-4031-8FDE-9BD3C4B777BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{F5E7C591-3D30-4C76-826E-2B66AD09E0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5E7C591-3D30-4C76-826E-2B66AD09E0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5E7C591-3D30-4C76-826E-2B66AD09E0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3973EF48-5082-4541-B68E-088A66016491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3973EF48-5082-4541-B68E-088A66016491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3973EF48-5082-4541-B68E-088A66016491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3973EF48-5082-4541-B68E-088A66016491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F123716-72C9-4031-8FDE-9BD3C4B777BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F123716-72C9-4031-8FDE-9BD3C4B777BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F123716-72C9-4031-8FDE-9BD3C4B777BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F123716-72C9-4031-8FDE-9BD3C4B777BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

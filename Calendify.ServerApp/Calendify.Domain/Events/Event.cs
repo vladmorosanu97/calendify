@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Calendify.Domain.Common;
 using Calendify.Domain.Notes;
+using Calendify.Domain.Users;
 
 namespace Calendify.Domain.Events
 {
@@ -13,8 +14,10 @@ namespace Calendify.Domain.Events
         public string Description { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public DateTime Created { get; }
+        public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
+        public long UserId { get; set; }
+        public User User { get; set; }
         public List<Note> Notes { get; set; }
     }
 }

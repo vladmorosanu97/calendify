@@ -5,6 +5,9 @@ using Calendify.Domain.Common;
 using Calendify.Domain.Events;
 using Calendify.Domain.Notes;
 using Calendify.Domain.Users;
+using Calendify.Persistence.Events;
+using Calendify.Persistence.Notes;
+using Calendify.Persistence.Users;
 using Microsoft.EntityFrameworkCore;
 
 namespace Calendify.Persistence.Shared
@@ -15,11 +18,10 @@ namespace Calendify.Persistence.Shared
         public DbSet<Note> Notes { get; set; }
         public DbSet<User> Users { get; set; }
 
-        public DatabaseContext(): base()
+        public DatabaseContext(DbContextOptions<DatabaseContext> options): base(options)
         {
-            Database.EnsureCreated();
         }
-        public DbSet<T> Set<T>() where T : class, IEntity
+        public new DbSet<T> Set<T>() where T : class, IEntity
         {
             return base.Set<T>();
         }
