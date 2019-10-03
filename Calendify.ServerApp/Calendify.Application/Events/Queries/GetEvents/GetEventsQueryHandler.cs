@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Calendify.Application.Interfaces.Application;
 using Calendify.Application.Interfaces.Persistence;
 
 namespace Calendify.Application.Events.Queries.GetEventsList

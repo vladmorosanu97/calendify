@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Calendify.Application.Interfaces.Application;
 
 namespace Calendify.Application.Events.Queries.GetEventsList
 {

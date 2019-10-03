@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Calendify.Domain.Users;
 
 namespace Calendify.Application.Interfaces.Persistence
 {
-    public interface IUserRepository
+    public interface IUserRepository: IRepository<User>
     {
     }
 }
