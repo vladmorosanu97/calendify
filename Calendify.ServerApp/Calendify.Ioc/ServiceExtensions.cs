@@ -1,11 +1,13 @@
-﻿using Calendify.Application.Events.Commands;
-using Calendify.Application.Interfaces.Application;
+﻿using Calendify.Application.Interfaces.Application;
 using Calendify.Application.Interfaces.Persistence;
-using Calendify.Application.Users.Commands;
+using Calendify.Application.Users.Commands.RegisterUser;
+using Calendify.Application.Users.Queries.ValidateUserEmail;
+using Calendify.Application.Utils;
 using Calendify.Persistence.Events;
 using Calendify.Persistence.Shared;
 using Calendify.Persistence.Users;
 using Calendify.Utils;
+using CSharpFunctionalExtensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,13 +21,15 @@ namespace Calendify.Ioc
             services.Configure<AppSettings>(configuration);
             var configurationSection = configuration.GetSection("ConnectionStrings:DefaultConnection");
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(configurationSection.Value));
+            services.AddScoped<IDatabaseContext>(sp => sp.GetRequiredService<DatabaseContext>());
 
             services.AddTransient<IEventRepository, EventRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
-            services.AddTransient<IDatabaseContext, DatabaseContext>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
-            services.AddTransient<ICommandHandler<RegisterUserCommand>>(provider =>
-                new RegisterUserHandler(provider.GetService<UserRepository>()));
+            services.AddTransient<ICommandHandler<RegisterUserCommand>, RegisterUserCommandHandler>();
+            services.AddTransient<IQueryHandler<CheckDuplicateEmailQuery, Result>, CheckDuplicateEmailQueryHandler>();
+            services.AddSingleton<Messages>();
             return services;
         }
     }
