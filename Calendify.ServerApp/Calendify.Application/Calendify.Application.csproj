@@ -5,10 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Events\Commands\" />
     <Folder Include="Interfaces\Infrastructure\" />
     <Folder Include="Notes\Commands\" />
-    <Folder Include="Users\Commands\" />
-    <Folder Include="Users\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +16,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Calendify.Domain\Calendify.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>..\..\..\..\Users\vladut.morosanu\.nuget\packages\microsoft.csharp\4.5.0\ref\netstandard2.0\Microsoft.CSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

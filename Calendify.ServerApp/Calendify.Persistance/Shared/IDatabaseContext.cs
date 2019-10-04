@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Calendify.Persistence.Shared
 {
-   public  interface IDatabaseContext
+    public interface IDatabaseContext
     {
         DbSet<Event> Events { get; set; }
         DbSet<Note> Notes { get; set; }
